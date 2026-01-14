@@ -2,113 +2,109 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+/* Links / buttons */
 .footer .icon-link {
-    font-size: 25px;
-    color: #000;
+  font-size: 25px;
+  color: #000;
 }
-
 .link-block a {
-    margin-top: 5px;
-    margin-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
-
-.dnerf {
-  font-variant: small-caps;
-}
-
-.teaser .hero-body {
-  padding-top: 0;
-  padding-bottom: 3rem;
-}
-
-.teaser {
-  font-family: 'Google Sans', sans-serif;
-}
-
-.publication-title {
-}
-
-.publication-banner {
-  max-height: parent;
-}
-
-.publication-banner video {
-  position: relative;
-  left: auto;
-  top: auto;
-  transform: none;
-  object-fit: fit;
-}
-
-.publication-header .hero-body {
-}
-
-.publication-title {
-    font-family: 'Google Sans', sans-serif;
-}
-
-.publication-authors {
-    font-family: 'Google Sans', sans-serif;
-}
-
-.publication-venue {
-    color: #555;
-    width: fit-content;
-    font-weight: bold;
-}
-
-.publication-awards {
-    color: #ff3860;
-    width: fit-content;
-    font-weight: bolder;
-}
-
-.publication-authors {
-}
-
-.publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
-}
-
-.publication-authors a:hover {
-    text-decoration: underline;
-}
-
 .author-block {
   display: inline-block;
 }
 
-.publication-banner img {
-}
-
+/* Title/authors font */
+.publication-title,
 .publication-authors {
-  /*color: #4286f4;*/
+  font-family: 'Google Sans', sans-serif;
+}
+.publication-authors a {
+  color: hsl(204, 86%, 53%) !important;
+}
+.publication-authors a:hover {
+  text-decoration: underline;
 }
 
-.publication-video {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-    overflow: hidden;
-    border-radius: 10px !important;
+/* Layout tuning */
+.container.is-max-desktop {
+  max-width: 1200px; /* keep text readable */
 }
 
-.publication-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.section-tight {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
-.publication-body img {
+/* Section alternating background for readability */
+.section-alt {
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
-.results-carousel {
-  overflow: hidden;
+/* Tagline under buttons */
+.tagline {
+  margin-top: 0.75rem;
+  font-size: 1.05rem;
+  color: #444;
 }
 
+/* Figures */
+.figure-wide {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+figure.image img {
+  width: 100%;
+  height: auto;
+}
+
+.figure-caption {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Notes box */
+.note-box {
+  background: #f5f7ff;
+  border: 1px solid #e3e7ff;
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+}
+
+/* Thin HR used inside method section */
+.thin-hr {
+  border: none;
+  border-top: 1px solid #e6e6e6;
+  margin: 1.25rem 0;
+}
+
+/* Tables: make responsive */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 10px;
+}
+
+.table {
+  min-width: 720px; /* prevents squished columns on desktop; scrolls on mobile */
+}
+
+pre code {
+  border-radius: 10px;
+}
+
+/* Keep your existing unused legacy styles (safe to keep, but not required) */
+.dnerf { font-variant: small-caps; }
+
+.results-carousel { overflow: hidden; }
 .results-carousel .item {
   margin: 5px;
   overflow: hidden;
@@ -117,71 +113,34 @@ body {
   padding: 0;
   font-size: 0;
 }
+.results-carousel video { margin: 0; }
 
-.results-carousel video {
-  margin: 0;
+
+/* Only a couple of sentences are highlighted via .hl-core.
+   Keep this subtle so the page doesn't look CORE-only. */
+.hl-core {
+  background: #fff7f0;
+  border-radius: 6px;
+  padding: 0.08rem 0.25rem;
 }
 
-.interpolation-panel {
-  background: #f5f5f5;
-  border-radius: 10px;
+/* Keep the existing note-box style; just add a slightly warmer CORE variant */
+.note-core {
+  background: #fff7f0;
+  border: 1px solid #ffe1cc;
 }
 
-.interpolation-panel .interpolation-image {
-  width: 100%;
-  border-radius: 5px;
+/* Optional: keep teaser height reasonable (works for gif too) */
+.teaser-hero img.figure-wide {
+  max-height: 560px;
+  object-fit: contain;
 }
 
-.interpolation-video-column {
-}
-
-.interpolation-panel .slider {
-  margin: 0 !important;
-}
-
-.interpolation-panel .slider {
-  margin: 0 !important;
-}
-
-#interpolation-image-wrapper {
-  width: 100%;
-}
-
-#interpolation-image-wrapper img {
-  border-radius: 5px;
-}
-
-/* ============================================================
-   Added: Make framework & all figures larger
-   - Framework: largest
-   - Other images (dataset/results/tsne/table): larger via wider container
-   ============================================================ */
-
-/* Increase global max width so all images appear larger */
-.container.is-max-desktop {
-  max-width: 1400px;
-}
-
-/* Framework image: biggest */
-.framework-image {
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto 1.5rem auto;
-  display: block;
-}
-
-/* Ensure all figure images scale to available width */
-figure.image img {
+/* Only shrink Fig.4 */
+.fig4-small img {
+  max-width: 720px; 
   width: 100%;
   height: auto;
-}
-
-
-/* ============================================================
-   Reduce image size only in Experimental Results section
-   ============================================================ */
-.experimental-results figure.image img {
-  max-width: 600px;   /* ← 여기서 크기 조절 */
   margin: 0 auto;
   display: block;
 }

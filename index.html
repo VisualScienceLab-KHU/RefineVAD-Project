@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Deepfake Detection, Audio-Visual">
+        content="RefineVAD: Semantic-Guided Feature Recalibration for Weakly Supervised Video Anomaly Detection.">
+  <meta name="keywords" content="Video Anomaly Detection, Weakly Supervised, Semantic-Guided, MoTAR, CORE, Category-Aware">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>RefineVAD: Semantic-Guided Feature Recalibration for Weakly Supervised Video Anomaly Detection</title>
@@ -13,25 +13,18 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
@@ -44,24 +37,24 @@
 
 <body>
 
+<!-- =========================
+     HERO
+     ========================= -->
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
 
-          <h1 class="title is-1 publication-title">RefineVAD: Semantic-Guided Feature Recalibration for Weakly Supervised Video Anomaly Detection</h1>
+          <h1 class="title is-1 publication-title">
+            RefineVAD: Semantic-Guided Feature Recalibration for Weakly Supervised Video Anomaly Detection
+          </h1>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              Junhee Lee*<sup>1</sup>,</span>
-            <span class="author-block">
-              ChaeBeen Bang*<sup>1</sup></span>
-            <span class="author-block">
-              MyoungChul Kim*<sup>2</sup></span>
-            <span class="author-block">
-              MyeongAh Cho†<sup>2</sup></span>
-            </span>
+            <span class="author-block">Junhee Lee*<sup>1</sup>,</span>
+            <span class="author-block">ChaeBeen Bang*<sup>1</sup>,</span>
+            <span class="author-block">MyoungChul Kim*<sup>2</sup>,</span>
+            <span class="author-block">MyeongAh Cho†<sup>2</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -69,19 +62,19 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>2</sup>Department of Software, Kyung Hee University</span>
+            <span class="author-block"><sup>2</sup>Department of Software Convergence, Kyung Hee University</span>
           </div>
 
-          *Equal Contribution †Corresponding Author
+          <div class="is-size-6" style="margin-top: 0.35rem;">
+            *Equal Contribution &nbsp;&nbsp; †Corresponding Author
+          </div>
 
-          <div class="column has-text-centered">
+          <div class="column has-text-centered" style="margin-top: 0.75rem;">
             <div class="publication-links">
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2511.13204"
                    class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Paper</span>
                 </a>
               </span>
@@ -89,65 +82,26 @@
               <span class="link-block">
                 <a href="https://github.com/VisualScienceLab-KHU/RefineVAD.git"
                    class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
+                  <span class="icon"><i class="fab fa-github"></i></span>
                   <span>Code</span>
                 </a>
               </span>
 
               <span class="link-block">
-                <a href=""
+                <a href="https://huggingface.co/datasets/JunheeLee/RefineVAD_Dataset"
                    class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-database"></i>
-                  </span>
+                  <span class="icon"><i class="fas fa-database"></i></span>
                   <span>Dataset</span>
                 </a>
               </span>
-
-
             </div>
-
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-
-<!-- =========================
-     Framework (replaces all content before Abstract)
-     - Place the image at: ./static/images/framework.jpg
-     ========================= -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <figure class="image">
-          <img src="./static/images/framework.jpeg" alt="Overall framework">
-        </figure>
-        <p class="has-text-centered" style="margin-top: 0.75\rem;">
-          Overall Framework
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- =========================
-     Abstract (kept unchanged)
-     ========================= -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-          Weakly-Supervised Video Anomaly Detection aims to identify anomalous events using only video-level labels, balancing annotation efficiency with practical applicability. However, existing methods often oversimplify the anomaly space by treating all abnormal events as a single category, overlooking the diverse semantic and temporal characteristics intrinsic to real-world anomalies. Inspired by how humans perceive anomalies, by jointly interpreting temporal motion patterns and semantic structures underlying different anomaly types, we propose RefineVAD, a novel framework that mimics this dual-process reasoning. Our framework integrates two core modules. The first, Motion-aware Temporal Attention and Recalibration (MoTAR), estimates motion salience and dynamically adjusts temporal focus via shift-based attention and global Transformer-based modeling. The second, Category-Oriented Refinement (CORE), injects soft anomaly category priors into the representation space by aligning segment-level features with learnable category prototypes through cross-attention. By jointly leveraging temporal dynamics and semantic structure, explicitly models both "how" motion evolves and "what" semantic category it resembles. Extensive experiments on WVAD benchmark validate the effectiveness of RefineVAD and highlight the importance of integrating semantic context to guide feature refinement toward anomaly-relevant patterns.
+          <!-- Balanced tagline (MoTAR + CORE), with CORE weight in wording (no highlight here) -->
+          <p class="tagline">
+            RefineVAD refines segment features with a dual process:
+            <b>MoTAR</b> improves temporal localization by motion-aware recalibration, and
+            <b>CORE</b> strengthens detection by making anomaly-type semantics directly useful for scoring.
           </p>
 
         </div>
@@ -156,6 +110,437 @@
   </div>
 </section>
 
+
+<!-- =========================
+     TEASER / FRAMEWORK (temporary: use Fig.2; later: teaser gif)
+     ========================= -->
+<section class="section section-tight teaser-hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <figure class="image">
+          <!-- TEMP now: teaser.jpeg (Figure 2). LATER: change to teaser.gif -->
+          <img class="figure-wide" src="./static/images/teaser.jpeg" alt="RefineVAD teaser">
+        </figure>
+        <p class="figure-caption">
+          Teaser: an overview of RefineVAD. MoTAR refines <b>when</b> anomalies occur via motion-aware temporal attention,
+          while CORE refines <b>what</b> the anomaly resembles by injecting soft category priors into the features used for scoring.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     ABSTRACT
+     ========================= -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Weakly-Supervised Video Anomaly Detection aims to identify anomalous events using only video-level labels, balancing annotation efficiency with practical applicability. However, existing methods often oversimplify the anomaly space by treating all abnormal events as a single category, overlooking the diverse semantic and temporal characteristics intrinsic to real-world anomalies. Inspired by how humans perceive anomalies, by jointly interpreting temporal motion patterns and semantic structures underlying different anomaly types, we propose RefineVAD, a novel framework that mimics this dual-process reasoning. Our framework integrates two core modules. The first, Motion-aware Temporal Attention and Recalibration (MoTAR), estimates motion salience and dynamically adjusts temporal focus via shift-based attention and global Transformer-based modeling. The second, Category-Oriented Refinement (CORE), injects soft anomaly category priors into the representation space by aligning segment-level features with learnable category prototypes through cross-attention. By jointly leveraging temporal dynamics and semantic structure, RefineVAD explicitly models both "how" motion evolves and "what" semantic anomaly category it resembles, enabling category cues to support more discriminative scoring under weak supervision. Extensive experiments on WVAD benchmark validate the effectiveness of RefineVAD and highlight the importance of integrating semantic context to guide feature refinement toward anomaly-relevant patterns.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     CORE CONTRIBUTIONS
+     ========================= -->
+<section class="section section-alt">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Core Contributions</h2>
+        <div class="content">
+          <ol>
+            <li>
+              We revisit WVAD from a human-inspired perspective and propose <b>dual-process refinement</b> that combines temporal dynamics and semantic structure for anomaly localization.
+            </li>
+            <li>
+              <b>MoTAR</b>: motion-aware temporal attention that adaptively recalibrates temporal feature flows based on motion salience, improving temporal focus and long-range dependency modeling.
+            </li>
+            <li>
+              <b>CORE</b>: a category-oriented refinement module that <b>learns anomaly-type priors and feeds them back into the detection pathway</b> via prototype-based cross-attention, improving snippet-level representation for scoring.
+            </li>
+            <li>
+              Extensive experiments (benchmark results, fine-grained localization, ablations, and transfer analysis) demonstrate consistent gains and validate the role of semantic guidance.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     MOTIVATION / PARADIGM FIGURE (PDF Fig.1)
+     ========================= -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Why Category-Aware WVAD?</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Prior WVAD paradigms largely focus on learning a single anomaly score from weak labels.
+            While some methods additionally train a category classifier, the category signal often remains <b>auxiliary</b> and does not meaningfully influence snippet scoring.
+            RefineVAD addresses this limitation by (i) improving temporal evidence with MoTAR and (ii) leveraging semantic evidence with CORE.
+          </p>
+
+          <!-- (1/2) only: highlight a single key sentence about CORE -->
+          <p class="note-box note-core">
+            <span class="hl-core"><b>Key point:</b> CORE is designed to resolve the “decoupling” issue—anomaly-type identification is not separate from detection, but is explicitly injected into the features used for anomaly scoring.</span>
+          </p>
+        </div>
+
+        <figure class="image">
+          <img class="figure-wide" src="./static/images/fig1_wvad_paradigms.jpeg" alt="WVAD paradigms comparison">
+        </figure>
+        <p class="figure-caption">
+          WVAD paradigms: (a) coarse snippet scoring, (b) category recognition is learned but does not directly guide scoring, (c) RefineVAD integrates temporal refinement (MoTAR) and semantic refinement (CORE).
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     PROPOSED METHOD
+     ========================= -->
+<section class="section section-alt">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Proposed Method</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            RefineVAD follows the MIL setup by splitting each video into <b>T</b> segments and extracting segment features.
+            MoTAR first recalibrates temporal cues using motion salience (adaptive shifting) and global attention, which improves “when” and “where” the anomaly evidence concentrates over time.
+          </p>
+
+          <p>
+            CORE then performs <b>category-oriented refinement</b> with learnable prototypes.
+            Specifically, it predicts a <b>soft anomaly-type distribution</b> at the video level, uses it to form a weighted prototype embedding, and injects this semantic prior into segment features via <b>cross-attention</b>.
+            This mechanism enriches segment representations with anomaly-type semantics and makes snippet-level scoring more discriminative—especially when the anomaly space is diverse.
+          </p>
+
+          <!-- (2/2) only: highlight a single key sentence about CORE -->
+          <p>
+            <span class="hl-core"><b>In short, CORE turns anomaly-type recognition into a scoring-relevant signal</b>, closing the gap between “recognizing the type” and “detecting the anomaly.”</span>
+          </p>
+        </div>
+
+        <!-- Keep this figure even if teaser is currently Fig.2 -->
+        <figure class="image">
+          <img class="figure-wide" src="./static/images/fig2_overall_arch.jpeg" alt="Overall architecture of RefineVAD">
+        </figure>
+        <p class="figure-caption">
+          Overall architecture of RefineVAD (MoTAR + CORE).
+        </p>
+
+        <hr class="thin-hr">
+
+        <div class="columns is-variable is-6">
+          <div class="column">
+            <h3 class="title is-5">MoTAR: Motion-aware Temporal Attention & Recalibration</h3>
+            <div class="content has-text-justified">
+              <ul>
+                <li>Estimate motion salience from feature differences and compute an adaptive shift ratio.</li>
+                <li>Apply channel shifting proportionally to motion intensity, then model long-range dependencies with a lightweight Transformer.</li>
+              </ul>
+            </div>
+            <figure class="image">
+              <img src="./static/images/fig3_motar.jpeg" alt="MoTAR overview">
+            </figure>
+            <p class="figure-caption">
+              MoTAR overview: motion variance guides adaptive channel shifting + global attention.
+            </p>
+          </div>
+
+          <div class="column">
+            <h3 class="title is-5">CORE: Category-Oriented Refinement</h3>
+
+            <div class="content has-text-justified">
+              <ul>
+                <li>Predict a video-level soft distribution over anomaly categories and compute a weighted prototype prior.</li>
+                <li>Inject the prototype prior into segment features via cross-attention, refining snippet representations for scoring.</li>
+                <li>Improves both <b>fine-grained localization</b> and <b>cross-dataset semantic transfer</b> by learning a structured semantic space.</li>
+              </ul>
+
+              <p class="note-box note-core">
+                CORE is emphasized in our design because WVAD anomalies are semantically diverse; explicitly modeling anomaly types helps prevent collapsing all abnormal events into a single coarse score.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     EXPERIMENTS: MAIN RESULTS (Table 1)
+     ========================= -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Results on WVAD Benchmarks</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            RefineVAD reports <b>88.92% AUC</b> on UCF-Crime and <b>88.66% AP</b> on XD-Violence (Table 1),
+            showing strong performance across two widely-used WVAD benchmarks.
+            Improvements come from the complementary effects of MoTAR (temporal recalibration) and CORE (semantic refinement for scoring).
+          </p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="table is-striped is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Setting</th>
+                <th>Method</th>
+                <th>Source</th>
+                <th>UCF-AUC (%)</th>
+                <th>XD-AP (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="3"><b>semi-sup.</b></td>
+                <td>SVM baseline</td>
+                <td>-</td>
+                <td>50.10</td>
+                <td>50.80</td>
+              </tr>
+              <tr>
+                <td>OCSVM (1999)</td>
+                <td>NeurIPS</td>
+                <td>63.20</td>
+                <td>28.63</td>
+              </tr>
+              <tr>
+                <td>Hasan et al. (2016)</td>
+                <td>CVPR</td>
+                <td>51.20</td>
+                <td>31.25</td>
+              </tr>
+
+              <tr>
+                <td rowspan="16"><b>weakly-sup.</b></td>
+                <td>Ju et al. (2022)</td>
+                <td>ECCV</td>
+                <td>84.72</td>
+                <td>76.57</td>
+              </tr>
+              <tr><td>Sultani et al. (2018)</td><td>CVPR</td><td>84.14</td><td>75.18</td></tr>
+              <tr><td>Wu et al. (2020)</td><td>ECCV</td><td>84.57</td><td>80.00</td></tr>
+              <tr><td>AVVD (2022)</td><td>TMM</td><td>82.45</td><td>78.10</td></tr>
+              <tr><td>RTFM (2021)</td><td>ICCV</td><td>85.66</td><td>78.27</td></tr>
+              <tr><td>DMU (2023)</td><td>AAAI</td><td>86.75</td><td>81.66</td></tr>
+              <tr><td>UMIL (2023)</td><td>CVPR</td><td>86.75</td><td>-</td></tr>
+              <tr><td>CLIP-TSA (2023)</td><td>ICIP</td><td>87.58</td><td>82.17</td></tr>
+              <tr><td>HSN (2024)</td><td>CVIU</td><td>85.45</td><td>-</td></tr>
+              <tr><td>IFS-VAD (2024)</td><td>TCSVT</td><td>85.47</td><td>83.14</td></tr>
+              <tr><td>VadCLIP (2024)</td><td>AAAI</td><td>88.02</td><td>84.57</td></tr>
+              <tr><td>PEMIL (2024)</td><td>CVPR</td><td>86.83</td><td>88.21</td></tr>
+              <tr><td>ReFLIP (2024)</td><td>TCSVT</td><td>88.57</td><td>85.81</td></tr>
+              <tr><td>CMHKF (2025a)</td><td>ACL</td><td>-</td><td>86.57</td></tr>
+              <tr><td>Ex-VAD (2025)</td><td>ICML</td><td>88.29</td><td>86.52</td></tr>
+              <tr><td>π-VAD (2025)</td><td>CVPR</td><td><b>90.33</b></td><td>85.37</td></tr>
+              <tr>
+                <td colspan="2"><b>RefineVAD (Ours)</b></td>
+                <td><b>88.92</b></td>
+                <td><b>88.66</b></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     FINE-GRAINED + ABLATION (Table 2/3)
+     ========================= -->
+<section class="section section-alt">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Fine-grained Evaluation & Ablations</h2>
+
+        <h3 class="title is-5">Fine-grained comparisons on UCF-Crime (mAP@IoU)</h3>
+        <div class="table-wrap">
+          <table class="table is-striped is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>0.1</th><th>0.2</th><th>0.3</th><th>0.4</th><th>0.5</th><th>AVG</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Random Baseline</td><td>0.21</td><td>0.14</td><td>0.04</td><td>0.02</td><td>0.01</td><td>0.08</td></tr>
+              <tr><td>Sultani et al. (2018)</td><td>5.73</td><td>4.41</td><td>2.69</td><td>1.93</td><td>1.44</td><td>3.24</td></tr>
+              <tr><td>AVVD (2022)</td><td>10.27</td><td>7.01</td><td>6.25</td><td>3.42</td><td>3.29</td><td>6.05</td></tr>
+              <tr><td>VadCLIP (2024)</td><td>11.72</td><td>7.83</td><td>6.40</td><td>4.53</td><td>2.93</td><td>6.68</td></tr>
+              <tr><td>ITC (2024)</td><td>13.54</td><td>9.24</td><td>7.45</td><td>5.46</td><td>3.79</td><td>7.90</td></tr>
+              <tr><td>ReFLIP (2024)</td><td>14.23</td><td>10.34</td><td>9.32</td><td>7.54</td><td>6.81</td><td>9.62</td></tr>
+              <tr><td>Ex-VAD (2025)</td><td>16.51</td><td>12.35</td><td>9.41</td><td>7.82</td><td>4.65</td><td>10.15</td></tr>
+              <tr><td><b>RefineVAD (Ours)</b></td><td><b>20.90</b></td><td><b>13.17</b></td><td>8.14</td><td>4.41</td><td>3.03</td><td><b>9.93</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <hr class="thin-hr">
+
+        <h3 class="title is-5">Ablation on UCF-Crime (AUC %)</h3>
+        <div class="content has-text-justified">
+          <p>
+            Ablation shows that both temporal recalibration (MoTAR) and semantic refinement (CORE) contribute,
+            with notable gains coming from CORE’s category injection and soft classification.
+          </p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="table is-striped is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>MoTAR</th>
+                <th>Category Injection</th>
+                <th>Soft Classification</th>
+                <th>AUC (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td></td><td></td><td></td><td>84.60</td></tr>
+              <tr><td>✓</td><td></td><td></td><td>85.43</td></tr>
+              <tr><td></td><td>✓</td><td></td><td>87.28</td></tr>
+              <tr><td>✓</td><td>✓</td><td></td><td>87.85</td></tr>
+              <tr><td>✓</td><td>✓</td><td>✓</td><td><b>88.89</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     SEMANTIC TRANSFER (Table 4 + Fig.4)
+     ========================= -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Cross-Dataset Semantic Transfer</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            CORE’s category classifier and prototypes learned on UCF-Crime remain effective on XD-Violence, supporting transferability of the learned semantic space.
+          </p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="table is-striped is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Setting</th>
+                <th>Category GT</th>
+                <th>AP (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Full Training</td><td>✓</td><td><b>88.66</b></td></tr>
+              <tr><td>Freeze CORE (Classifier & Embeddings trained only on UCF)</td><td>✗</td><td>87.52</td></tr>
+              <tr><td>Direct Cross-Domain Transfer (Train: UCF, Test: XD, no fine-tuning)</td><td>✗</td><td>77.56</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="image fig4-small" style="margin-top: 1.25rem;">
+          <img class="figure-wide" src="./static/images/fig4_tsne_logits.jpeg" alt="t-SNE of category logits">
+        </figure>
+        <p class="figure-caption">
+          t-SNE visualization of category logit features: semantically similar categories form meaningful clusters.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     QUALITATIVE (Fig.5)
+     ========================= -->
+<section class="section section-alt">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
+
+        <figure class="image">
+          <img class="figure-wide" src="./static/images/fig5_score_curve.jpeg" alt="Example predicted scores with GT">
+        </figure>
+        <p class="figure-caption">
+          Example frame and predicted anomaly scores over time (blue), with ground-truth anomalous intervals (red shaded).
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     CITATION
+     ========================= -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Citation</h2>
+        <div class="content">
+<pre><code>@article{lee2025refinevad,
+  title   = {RefineVAD: Semantic-Guided Feature Recalibration for Weakly Supervised Video Anomaly Detection},
+  author  = {Junhee Lee and ChaeBeen Bang and MyoungChul Kim and MyeongAh Cho},
+  journal = {arXiv preprint arXiv:2511.13204},
+  year    = {2025}
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p class="is-size-7">
+      © 2026 RefineVAD Project Page.
+    </p>
+  </div>
+</footer>
 
 </body>
 </html>
