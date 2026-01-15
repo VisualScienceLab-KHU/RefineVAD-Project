@@ -4,11 +4,12 @@
   </a>
 </p>
 
-## RefineVAD Project Page
-This repository contains the project page for **RefineVAD: Semantic-Guided Feature Recalibration for Weakly Supervised Video Anomaly Detection**.
+## :video_camera: RefineVAD Project Page
+This repository contains the project page for **"RefineVAD: Semantic-Guided Feature Recalibration for Weakly Supervised Video Anomaly Detection"**.
 
 ## Acknowledgement
 The website template is adapted from  
 **Nerfies: Deformable Neural Radiance Fields**  
 https://github.com/nerfies/nerfies.github.io
+
 
